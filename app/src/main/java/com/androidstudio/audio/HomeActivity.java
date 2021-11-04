@@ -38,27 +38,29 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         button = findViewById(R.id.StopBtn);
         button.setOnClickListener(this);
+        songLabel = findViewById(R.id.txvCurrentSong);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.SelectBtn:
-                Intent intent = new Intent(HomeActivity.this,SongSelectActivity.class);
+                Intent intent = new Intent(HomeActivity.this, SongSelectActivity.class);
                 startActivity(intent);
                 break;
             case R.id.PlayBtn:
-                if(mediaPlayer != null)
-                    if(mediaPlayer.isPlaying()){
+                if (mediaPlayer != null){
+                    if (mediaPlayer.isPlaying()) {
                         mediaPlayer.stop();
                         mediaPlayer.release();
                         mediaPlayer = null;
                     }
-                mediaPlayer = songsArrayList.get(SongSelected.CurrentSongNum-1);
-                mediaPlayer.start();
-                songLabel = findViewById(R.id.txvLabel);
-                String songname = "Đang phát bài thứ " + SongSelected.CurrentSongNum +"";
-                songLabel.setText(songname);
+                }
+                try {
+                    mediaPlayer = songsArrayList.get(SongSelected.CurrentSongNum - 1);
+                    songLabel.setText("Đang phát bài thứ " + SongSelected.CurrentSongNum + "");
+                    mediaPlayer.start();
+                }catch (Exception e){}
                 break;
             case R.id.StopBtn:
                 if(mediaPlayer != null)
