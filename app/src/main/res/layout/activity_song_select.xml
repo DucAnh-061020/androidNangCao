@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SongSelectActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:text="Bài số"
+            android:textSize="30sp"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/songNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txvLabel"
+            android:layout_centerHorizontal="true"
+            android:text="0"
+            android:textColor="#000"
+            android:textSize="36sp" />
+
+        <TableLayout
+            android:id="@+id/SongListTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/Song1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="1"
+                    android:text="1"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/Song2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="1"
+                    android:text="2"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/Song3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="1"
+                    android:text="3"
+                    android:textSize="30sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/Song4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:text="4"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/Song5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="1"
+                    android:text="5"
+                    android:textSize="30sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/Song6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:text="6"
+                    android:textSize="30sp" />
+            </TableRow>
+
+        </TableLayout>
+        <Button
+            android:id="@+id/ChoseBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chọn"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="30dp"
+            android:textSize="30sp"/>
+    </RelativeLayout>
+</FrameLayout>
